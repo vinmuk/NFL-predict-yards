@@ -18,10 +18,10 @@ GCN Layer codes are heavily depends on https://github.com/danielegrattarola/spek
   
 
 - Optimizer
-  - Adam
+  - Adam(lr=1e-3)
 
 - Loss function
-  - Binary crossentropy and mae for last layer
+  - Binary crossentropy and mae for the last layer
   - Binary crossentropy loss with divided output into 50 sections are located immediately after each GCN layer. This hastens the time to convergence.
 
 - Data Augment
@@ -36,6 +36,9 @@ GCN Layer codes are heavily depends on https://github.com/danielegrattarola/spek
        -  the number of opponent players around each player.
        -  whether to collide with rusher when traveling a certain distance
        -  distance from rusher
+
+- Post process
+  - Padding by 0 or 1 for parts that cannot be reached from the current position.
 
 # How to run
 ```
